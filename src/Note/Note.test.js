@@ -11,7 +11,7 @@ describe(`Note component`, () => {
   }
 
   it('renders a .Note by default', () => {
-    const wrapper = shallow(<Note />)
+    const wrapper = shallow(<Note {...props}/>)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 

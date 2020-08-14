@@ -24,6 +24,7 @@ exports[`NotePageNav component renders a .NotePageNav by default 1`] = `
       rotation={null}
       size={null}
       spin={false}
+      swapOpacity={false}
       symbol={false}
       title=""
       transform={null}
@@ -32,12 +33,4 @@ exports[`NotePageNav component renders a .NotePageNav by default 1`] = `
     Back
   </NavCircleButton>
 </div>
-`;
-
-exports[`NotePageNav component renders a h3 with folder name when in props 1`] = `
-<h3
-  className="NotePageNav__folder-name"
->
-  Important
-</h3>
 `;
