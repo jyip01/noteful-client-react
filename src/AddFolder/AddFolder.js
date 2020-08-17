@@ -36,6 +36,7 @@ export default class AddFolder extends Component {
       .catch(error => {
         console.error({ error })
       })
+      
   }
 
   render() {
