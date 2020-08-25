@@ -1,3 +1,3 @@
-export default {
-  API_ENDPOINT: 'https://young-meadow-57359.herokuapp.com/api'
+export default{
+    API_KEY: process.env.REACT_APP_API_KEY,
 }
