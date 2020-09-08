@@ -7,7 +7,7 @@ exports[`AddItemForm component renders the complete form 1`] = `
   <h2>
     Create a folder
   </h2>
-  <ShopLaterForm
+  <NotefulForm
     onSubmit={[Function]}
   >
     <div
@@ -33,6 +33,6 @@ exports[`AddItemForm component renders the complete form 1`] = `
         Add folder
       </button>
     </div>
-  </ShopLaterForm>
+  </NotefulForm>
 </section>
 `;

@@ -1,26 +1,16 @@
 {
-  "files": {
-    "main.css": "/static/css/main.fff79bcb.chunk.css",
-    "main.js": "/static/js/main.f89cdf33.chunk.js",
-    "main.js.map": "/static/js/main.f89cdf33.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a229377d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a229377d.js.map",
-    "static/css/2.47271137.chunk.css": "/static/css/2.47271137.chunk.css",
-    "static/js/2.600f5996.chunk.js": "/static/js/2.600f5996.chunk.js",
-    "static/js/2.600f5996.chunk.js.map": "/static/js/2.600f5996.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ef20dfc6bb8eeb2df2ba629c333da34d.js": "/precache-manifest.ef20dfc6bb8eeb2df2ba629c333da34d.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.47271137.chunk.css.map": "/static/css/2.47271137.chunk.css.map",
-    "static/css/main.fff79bcb.chunk.css.map": "/static/css/main.fff79bcb.chunk.css.map",
-    "static/js/2.600f5996.chunk.js.LICENSE.txt": "/static/js/2.600f5996.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/roboto-latin-900italic.ebf6d164.woff2"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.a229377d.js",
-    "static/css/2.47271137.chunk.css",
-    "static/js/2.600f5996.chunk.js",
-    "static/css/main.fff79bcb.chunk.css",
-    "static/js/main.f89cdf33.chunk.js"
-  ]
+  "main.css": "/static/css/main.c9f63a6c.chunk.css",
+  "main.js": "/static/js/main.dde87d67.chunk.js",
+  "main.js.map": "/static/js/main.dde87d67.chunk.js.map",
+  "static/css/1.af1cabe5.chunk.css": "/static/css/1.af1cabe5.chunk.css",
+  "static/js/1.1e5f4cda.chunk.js": "/static/js/1.1e5f4cda.chunk.js",
+  "static/js/1.1e5f4cda.chunk.js.map": "/static/js/1.1e5f4cda.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/index.css": "/static/media/roboto-latin-900italic.bc833e72.woff",
+  "static/css/main.c9f63a6c.chunk.css.map": "/static/css/main.c9f63a6c.chunk.css.map",
+  "static/css/1.af1cabe5.chunk.css.map": "/static/css/1.af1cabe5.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.5ee936f0a7d3067b1688e175abc22888.js": "/precache-manifest.5ee936f0a7d3067b1688e175abc22888.js",
+  "service-worker.js": "/service-worker.js"
 }

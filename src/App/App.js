@@ -1,40 +1,40 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ShopListNav from '../ShopListNav/ShopListNav'
-import ShopPageNav from '../ShopPageNav/ShopPageNav'
-import ShopListMain from '../ShopListMain/ShopListMain'
-import ShopPageMain from '../ShopPageMain/ShopPageMain'
+import NoteListNav from '../NoteListNav/NoteListNav'
+import NotePageNav from '../NotePageNav/NotePageNav'
+import NoteListMain from '../NoteListMain/NoteListMain'
+import NotePageMain from '../NotePageMain/NotePageMain'
 import AddFolder from '../AddFolder/AddFolder'
-import AddList from '../AddList/AddList'
+import AddNote from '../AddNote/AddNote'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import './App.css'
 
 class App extends Component {
   state = {
-    lists: [],
+    notes: [],
     folders: [],
   };
 
   componentDidMount() {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/lists`),
+      fetch(`${config.API_ENDPOINT}/notes`),
       fetch(`${config.API_ENDPOINT}/folders`)
     ])
-      .then(([listsRes, foldersRes]) => {
-        if (!listsRes.ok)
-          return listsRes.json().then(e => Promise.reject(e))
+      .then(([notesRes, foldersRes]) => {
+        if (!notesRes.ok)
+          return notesRes.json().then(e => Promise.reject(e))
         if (!foldersRes.ok)
           return foldersRes.json().then(e => Promise.reject(e))
 
         return Promise.all([
-          listsRes.json(),
+          notesRes.json(),
           foldersRes.json(),
         ])
       })
-      .then(([lists, folders]) => {
-        this.setState({ lists, folders })
+      .then(([notes, folders]) => {
+        this.setState({ notes, folders })
       })
       .catch(error => {
         console.error({ error })
@@ -50,18 +50,18 @@ class App extends Component {
     })
   }
 
-  handleAddList = list => {
+  handleAddNote = note => {
     this.setState({
-      lists: [
-        ...this.state.lists,
-        list
+      notes: [
+        ...this.state.notes,
+        note
       ]
     })
   }
 
-  handleDeleteList = listId => {
+  handleDeleteNote = noteId => {
     this.setState({
-      lists: this.state.lists.filter(list => list.id !== listId)
+      notes: this.state.notes.filter(note => note.id !== noteId)
     })
   }
 
@@ -73,20 +73,20 @@ class App extends Component {
             exact
             key={path}
             path={path}
-            component={ShopListNav}
+            component={NoteListNav}
           />
         )}
         <Route
-          path='/list/:listId'
-          component={ShopPageNav}
+          path='/note/:noteId'
+          component={NotePageNav}
         />
         <Route
           path='/add-folder'
-          component={ShopPageNav}
+          component={NotePageNav}
         />
         <Route
-          path='/add-list'
-          component={ShopPageNav}
+          path='/add-note'
+          component={NotePageNav}
         />
       </>
     )
@@ -100,20 +100,20 @@ class App extends Component {
             exact
             key={path}
             path={path}
-            component={ShopListMain}
+            component={NoteListMain}
           />
         )}
         <Route
-          path='/list/:listId'
-          component={ShopPageMain}
+          path='/note/:noteId'
+          component={NotePageMain}
         />
         <Route
           path='/add-folder'
           component={AddFolder}
         />
         <Route
-          path='/add-list'
-          component={AddList}
+          path='/add-note'
+          component={AddNote}
         />
       </>
     )
@@ -121,11 +121,11 @@ class App extends Component {
 
   render() {
     const value = {
-      lists: this.state.lists,
+      notes: this.state.notes,
       folders: this.state.folders,
       addFolder: this.handleAddFolder,
-      addList: this.handleAddList,
-      deleteList: this.handleDeleteList,
+      addNote: this.handleAddNote,
+      deleteNote: this.handleDeleteNote,
     }
     return (
       <ApiContext.Provider value={value}>
@@ -135,7 +135,7 @@ class App extends Component {
           </nav>
           <header className='App__header'>
             <h1>
-              <Link to='/'>ShopLater</Link>
+              <Link to='/'>Noteful</Link>
               {' '}
               <FontAwesomeIcon icon='check-double' />
             </h1>

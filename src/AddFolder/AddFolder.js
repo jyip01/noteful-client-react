@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import ShopLaterForm from '../ShopLaterForm/ShopLaterForm'
+import NotefulForm from '../NotefulForm/NotefulForm'
 import ApiContext from '../ApiContext'
 import config from '../config'
-//import './AddFolder.css'
+import './AddFolder.css'
 
 export default class AddFolder extends Component {
   static defaultProps = {
@@ -36,13 +36,14 @@ export default class AddFolder extends Component {
       .catch(error => {
         console.error({ error })
       })
+      
   }
 
   render() {
     return (
       <section className='AddFolder'>
         <h2>Create a folder</h2>
-        <ShopLaterForm onSubmit={this.handleSubmit}>
+        <NotefulForm onSubmit={this.handleSubmit}>
           <div className='field'>
             <label htmlFor='folder-name-input'>
               Name
@@ -54,7 +55,7 @@ export default class AddFolder extends Component {
               Add folder
             </button>
           </div>
-        </ShopLaterForm>
+        </NotefulForm>
       </section>
     )
   }

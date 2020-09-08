@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default React.createContext({
-  lists: [],
+  notes: [],
   folders: [],
   addFolder: () => {},
-  addList: () => {},
-  deleteList: () => {},
+  addNote: () => {},
+  deleteNote: () => {},
 })
